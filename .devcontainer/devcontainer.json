@@ -1,0 +1,15 @@
+{
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "Prisma.prisma"
+            ]
+        }
+    },
+    
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "postCreateCommand": "cd api && npm install && npx prisma db push && npx prisma db seed",
+    "postStartCommand": "cd api && npm run start"
+}
